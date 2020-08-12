@@ -34,6 +34,14 @@ export const query = graphql`
         frontmatter {
           brand
           anchor
+          cars {
+            content
+            extraInfo
+            header
+            subheader
+            imageFileNameDetail
+            imageFileName
+          }
           clients {
             href
             imageFileName
@@ -122,7 +130,7 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
 
   return (
     <>
-      <SEO lang={langKey} title="Top" keywords={keywords} description={description} />
+      <SEO lang={langKey} title="NCC" keywords={keywords} description={description} />
       <Navbar
         anchors={anchors}
         frontmatter={navBarNode.frontmatter}
@@ -156,8 +164,8 @@ IndexPage.propTypes = {
 
 IndexPage.defaultProps = {
   pathContext: {
-    langKey: "en",
-    defaultLang: "en",
+    langKey: "it",
+    defaultLang: "it",
     langTextMap: {},
   },
 };

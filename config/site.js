@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Gatsyby Startbootstrap Agency",
+  title: "Yari Taxi Driver",
   keywords: [
     "gatsby",
     "gatsbyjs",
@@ -11,11 +11,11 @@ module.exports = {
     "startbootstrap-agency",
   ],
   description: "gatsby version of startbootstrap-agency with i18n support.",
-  author: "thundermiracle",
+  author: "wrabbit",
   trackingId: "UA-119418003-5",
-  defaultLang: "en",
+  defaultLang: "it",
   langTextMap: {
     en: "English",
-    ja: "日本語",
+    it: "Italiano",
   },
 };

@@ -1,4 +1,4 @@
 ---
-brand: "Start Bootstrap"
+brand: "YARI CHAFFEUR MILAN"
 menuText: "Menu "
 ---

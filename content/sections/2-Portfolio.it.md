@@ -1,6 +1,6 @@
 ---
-anchor: "ポートフォリオ"
-header: "ポートフォリオ"
+anchor: "Portfolio"
+header: "Portfolio"
 subheader: "あなたは偶然断然その持通り"
 portfolios: [
   {
