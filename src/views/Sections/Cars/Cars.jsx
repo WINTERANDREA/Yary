@@ -7,6 +7,7 @@ import SectionHeader from "components/SectionHeader";
 import PortfolioItem from "components/PortfolioItem";
 import PageSection from "components/PageSection";
 import "./Cars.scss";
+import Image from "components/Image";
 
 const Cars = ({ className, frontmatter }) => {
   if (!frontmatter) {

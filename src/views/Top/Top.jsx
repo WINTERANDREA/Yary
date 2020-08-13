@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 import { Button } from "react-bootstrap";
 import useSmoothScrollTo from "hooks/useSmoothScrollTo";
 import ImageCard from "components/ImageCard";
+import Image from "components/Image";
+
+import "./Top.scss";
 
 const Top = ({ frontmatter }) => {
   if (!frontmatter) {
@@ -24,12 +27,19 @@ const Top = ({ frontmatter }) => {
   }
 
   return (
-    <ImageCard
-      imageFileName={imageFileName}
-      header={header}
-      subheader={subheader}
-      extraInfo={extraInfoPart}
-    />
+    <>
+      <Image
+        style={{ zIndex: 100, width: 80, position: "absolute", right: 20, bottom: 20 }}
+        fileName="whatsapp.png"
+        alt="file"
+      />
+      <ImageCard
+        imageFileName={imageFileName}
+        header={header}
+        subheader={subheader}
+        extraInfo={extraInfoPart}
+      />
+    </>
   );
 };
 
