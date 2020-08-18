@@ -7,9 +7,7 @@
   width: 70px;
   height: 70px;
 
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     box-shadow: inset 5px 5px 11px #a88a24, inset -5px -5px 11px #ffff48;
   }
   &_image {
