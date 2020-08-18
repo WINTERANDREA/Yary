@@ -1,5 +1,5 @@
 ---
-anchor: "Chi Siamo"
+# anchor: "Chi Siamo"
 header: "Chi Siamo"
 subheader: "あなたは偶然断然その持通りについて事のためにまかり出ですた。"
 timeline: [

@@ -17,7 +17,7 @@ const Cars = ({ className, frontmatter }) => {
   const { anchor, header: rootHeader, subheader: rootSubHeader, cars } = frontmatter;
 
   return (
-    <PageSection className={clsx("portfolio-section", className)} id={anchor}>
+    <PageSection className={clsx("cars-section", className)} id={anchor}>
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>
