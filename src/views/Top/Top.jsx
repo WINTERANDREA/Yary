@@ -13,7 +13,16 @@ const Top = ({ frontmatter }) => {
     return null;
   }
 
-  const { header, subheader, imageFileName, jumpToAnchor, jumpToAnchorText } = frontmatter;
+  const {
+    header,
+    subheader,
+    imageFileName,
+    jumpToAnchor,
+    jumpToAnchorText,
+    telefono,
+    whatsapp,
+    telegram,
+  } = frontmatter;
   // eslint-disable-next-line react-hooks/rules-of-hooks
 
   let extraInfoPart;
@@ -21,7 +30,7 @@ const Top = ({ frontmatter }) => {
     extraInfoPart = (
       <Button size="xl" variant="primary" className="button">
         {jumpToAnchorText}
-        <IconCallSet />
+        <IconCallSet telefono={telefono} whatsapp={whatsapp} telegram={telegram} />
       </Button>
     );
   }

@@ -1,4 +1,4 @@
 ---
-brand: "YARI NCC MILANO"
+brand: "NCC TAXI MILANO"
 menuText: "Menu"
 ---

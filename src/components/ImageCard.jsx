@@ -27,7 +27,6 @@ const ImageCard = ({
       <Card.ImgOverlay className="no-padding">
         <Container>
           <div className="intro-text">
-            <div className="intro-lead-in">{subheader}</div>
             <div className="intro-heading text-uppercase">{header}</div>
             {extraInfo}
             {children}

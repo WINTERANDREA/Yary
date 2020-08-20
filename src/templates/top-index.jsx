@@ -24,6 +24,7 @@ export const query = graphql`
       siteMetadata {
         keywords
         description
+        title
       }
     }
     allMarkdownRemark(
@@ -95,6 +96,8 @@ export const query = graphql`
             }
             subheader
           }
+          telefono
+          telegram
           telephone
           termsHref
           termsText
@@ -106,6 +109,7 @@ export const query = graphql`
             imageFileName
             subheader
           }
+          whatsapp
         }
         fields {
           fileName
@@ -119,7 +123,7 @@ export const query = graphql`
 const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } }) => {
   const {
     site: {
-      siteMetadata: { keywords, description },
+      siteMetadata: { keywords, description, title },
     },
     allMarkdownRemark: { nodes },
   } = data;
@@ -135,7 +139,7 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
 
   return (
     <>
-      <SEO lang={langKey} title="NCC" keywords={keywords} description={description} />
+      <SEO lang={langKey} title="Homepage" keywords={keywords} description={description} />
       <Navbar
         anchors={anchors}
         frontmatter={navBarNode.frontmatter}

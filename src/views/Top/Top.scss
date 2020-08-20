@@ -1,14 +1,32 @@
 // Styling for the team section
 .button {
   color: white !important;
-  font-size: 25px !important;
+  font-size: 20px !important;
+  line-height: 22px !important;
   background-color: transparent !important;
+  margin-top: 15px;
 }
 
-@media (min-width: 535px) {
+@media (min-width: 360px) {
   .button {
-    color: white !important;
+    margin-top: 30px;
+    font-size: 25px !important;
+    line-height: 30px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .button {
+    margin-top: 100px;
     font-size: 30px !important;
-    background-color: transparent !important;
+    line-height: 40px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .button {
+    margin-top: 50px;
+    font-size: 35px !important;
+    line-height: 40px !important;
   }
 }
