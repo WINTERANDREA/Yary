@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import Img from "gatsby-image/withIEPolyfill";
 
-const Image = ({ fileName, alt, ...restProps }) => (
+const Image = ({ fileName, alt, objectPosition, ...restProps }) => (
   <StaticQuery
     query={graphql`
       query ImageQuery {
@@ -31,7 +31,15 @@ const Image = ({ fileName, alt, ...restProps }) => (
       }
 
       const imageSizes = image.node.childImageSharp.sizes;
-      return <Img alt={alt} sizes={imageSizes} {...restProps} />;
+      return (
+        <Img
+          objectPosition={objectPosition}
+          style={{ objectPosition: "left" }}
+          alt={alt}
+          sizes={imageSizes}
+          {...restProps}
+        />
+      );
     }}
   />
 );
@@ -39,10 +47,12 @@ const Image = ({ fileName, alt, ...restProps }) => (
 Image.propTypes = {
   fileName: PropTypes.string.isRequired,
   alt: PropTypes.string,
+  objectPosition: PropTypes.string,
 };
 
 Image.defaultProps = {
   alt: null,
+  objectPosition: "center",
 };
 
 export default Image;

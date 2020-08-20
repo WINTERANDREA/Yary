@@ -4,5 +4,5 @@ export { default as Contact } from "./Contact";
 export { default as Services } from "./Services";
 export { default as Team } from "./Team";
 export { default as Clients } from "./Clients"; */
-export { default as Cars } from "./Cars";
 export { default as Pricing } from "./Pricing";
+export { default as Cars2 } from "./Cars2";

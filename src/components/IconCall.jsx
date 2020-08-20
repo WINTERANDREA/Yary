@@ -4,7 +4,7 @@ import Image from "components/Image";
 
 import "./IconCall.scss";
 
-const IconCall = ({ href, iconCallName }) => (
+const IconCall = ({ href, iconCallName, buttonText }) => (
   <span itemProp="telephone">
     <a
       className="icon-call"
@@ -14,6 +14,7 @@ const IconCall = ({ href, iconCallName }) => (
       aria-label={iconCallName}
     >
       <Image fileName={iconCallName} className="icon-call_image" />
+      <h6 className="button-text">{buttonText}</h6>
     </a>
   </span>
 );
@@ -21,11 +22,13 @@ const IconCall = ({ href, iconCallName }) => (
 IconCall.propTypes = {
   href: PropTypes.string,
   iconCallName: PropTypes.string,
+  buttonText: PropTypes.string,
 };
 
 IconCall.defaultProps = {
   href: "",
   iconCallName: null,
+  buttonText: "",
 };
 
 export default IconCall;

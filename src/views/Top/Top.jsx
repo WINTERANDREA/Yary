@@ -19,7 +19,7 @@ const Top = ({ frontmatter }) => {
   let extraInfoPart;
   if (jumpToAnchor && jumpToAnchorText) {
     extraInfoPart = (
-      <Button size="xl" variant="primary" className="text-uppercase button">
+      <Button size="xl" variant="primary" className="button">
         {jumpToAnchorText}
         <IconCallSet />
       </Button>

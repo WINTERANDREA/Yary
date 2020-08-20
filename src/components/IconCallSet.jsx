@@ -5,12 +5,17 @@ import "./IconCallSet.scss";
 const IconCallSet = () => {
   return (
     <div className="icon-call-set">
-      <IconCall href="tel:+393393286640" iconCallName="phone6.png" />
+      <IconCall href="tel:+393393286640" iconCallName="phone6.png" buttonText="Chiama" />
       <IconCall
         href="https://wa.me/393393286640?text=Buonasera,%20avrei%20bisogno%20di%20un%20passaggio%20da%20via"
         iconCallName="whatsapp.png"
+        buttonText="Whatsapp"
       />
-      <IconCall href="https://telegram.me/andrea91winter" iconCallName="telegram.png" />
+      <IconCall
+        href="https://telegram.me/andrea91winter"
+        iconCallName="telegram.png"
+        buttonText="Telegram"
+      />
     </div>
   );
 };

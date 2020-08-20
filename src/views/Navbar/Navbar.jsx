@@ -40,7 +40,6 @@ const MyNavbar = ({ anchors, frontmatter, extraItems }) => {
     <Navbar
       className={clsx("navbar-root", { "navbar-shrink": shrink })}
       expand="lg"
-      fixed="top"
       expanded={expanded}
     >
       <Container>

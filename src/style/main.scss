@@ -64,13 +64,13 @@ img::-moz-selection {
 }
 
 .btn-primary {
-  background-color: darken($primary, 7.5%) !important;
-  border-color: darken($primary, 7.5%) !important;
+  background-color: transparent;
+  border: none !important;
   &:active,
   &:focus,
   &:hover {
-    background-color: darken($primary, 7.5%) !important;
-    border-color: darken($primary, 7.5%) !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
     color: $gray-900;
   }
   &:active,

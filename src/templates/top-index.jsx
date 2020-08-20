@@ -34,13 +34,18 @@ export const query = graphql`
         frontmatter {
           brand
           anchor
-          cars {
-            content
-            extraInfo
-            header
-            subheader
-            imageFileNameDetail
+          cars2 {
             imageFileName
+            imageAlt
+            carName
+            carDetails
+            seats
+            numberOfSeats
+            price
+            amount
+            luggage
+            numberOfLuggage
+            detailButton
           }
           clients {
             href

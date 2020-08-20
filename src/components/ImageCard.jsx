@@ -17,7 +17,12 @@ const ImageCard = ({
 }) => {
   return (
     <Card className={clsx("image-card bg-dark text-white text-center", className)}>
-      <Image className="image" fileName={imageFileName} alt={imageAlt || header || subheader} />
+      <Image
+        objectPosition="left"
+        className="image"
+        fileName={imageFileName}
+        alt={imageAlt || header || subheader}
+      />
       <Card.ImgOverlay className="no-padding">
         <Container>
           <div className="intro-text">

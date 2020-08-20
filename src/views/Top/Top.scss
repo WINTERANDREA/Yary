@@ -1,4 +1,14 @@
 // Styling for the team section
 .button {
-  color: $gray-900;
+  color: white !important;
+  font-size: 25px !important;
+  background-color: transparent !important;
+}
+
+@media (min-width: 535px) {
+  .button {
+    color: white !important;
+    font-size: 30px !important;
+    background-color: transparent !important;
+  }
 }

@@ -1,7 +1,7 @@
 ---
 header: "NCC MILANO"
-subheader: "Noleggio Con Conducente"
-imageFileName: "head-6.jpg"
+subheader: ""
+imageFileName: "head-6-cut.jpg"
 jumpToAnchor: "Autovetture"
-jumpToAnchorText: "Meno di 2€/km"
+jumpToAnchorText: "Prenota subito la tua corsa a meno di 2€/km"
 ---
