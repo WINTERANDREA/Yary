@@ -1,7 +1,8 @@
 .image-card {
-  height: 459px;
+  height: 100vh;
+
   .image {
-    height: 459px;
+    height: 100%;
   }
   .no-padding {
     padding: 0;
@@ -28,15 +29,11 @@
 
 @media (min-width: 360px) {
   .image-card {
-    height: 459px;
-    .image {
-      height: 459px;
-    }
     .no-padding {
       padding: 0;
     }
     .intro-text {
-      padding-top: 80px;
+      padding-top: 200px;
       padding-bottom: 100px;
       .intro-lead-in {
         font-size: 22px;
@@ -56,41 +53,8 @@
   }
 }
 
-@media (min-width: 535px) {
-  .image-card {
-    height: 759px;
-    .image {
-      height: 759px;
-    }
-    .no-padding {
-      padding: 0;
-    }
-    .intro-text {
-      padding-top: 250px;
-      padding-bottom: 100px;
-      .intro-lead-in {
-        font-size: 22px;
-        font-style: italic;
-        line-height: 22px;
-        margin-bottom: 25px;
-        @include serif-font;
-      }
-      .intro-heading {
-        font-size: 50px;
-        font-weight: 700;
-        line-height: 50px;
-        background-color: rgba(0, 0, 0, 0.5);
-        @include heading-font;
-      }
-    }
-  }
-}
 @media (min-width: 768px) {
   .image-card {
-    height: 759px;
-    .image {
-      height: 759px;
-    }
     .intro-text {
       padding-top: 250px;
       padding-bottom: 200px;

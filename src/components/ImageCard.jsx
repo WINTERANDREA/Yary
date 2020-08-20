@@ -18,6 +18,7 @@ const ImageCard = ({
   return (
     <Card className={clsx("image-card bg-dark text-white text-center", className)}>
       <Image
+        objectFit="cover"
         objectPosition="left"
         className="image"
         fileName={imageFileName}
