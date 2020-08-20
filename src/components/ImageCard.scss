@@ -1,9 +1,7 @@
 .image-card {
-  height: 600px;
-  object-position: left !important;
+  height: 459px;
   .image {
-    height: 600px;
-    object-position: left !important;
+    height: 459px;
   }
   .no-padding {
     padding: 0;
@@ -30,15 +28,15 @@
 
 @media (min-width: 360px) {
   .image-card {
-    height: 759px;
+    height: 459px;
     .image {
-      height: 759px;
+      height: 459px;
     }
     .no-padding {
       padding: 0;
     }
     .intro-text {
-      padding-top: 200px;
+      padding-top: 80px;
       padding-bottom: 100px;
       .intro-lead-in {
         font-size: 22px;
