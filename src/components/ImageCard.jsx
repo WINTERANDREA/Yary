@@ -32,7 +32,7 @@ const ImageCard = ({
     <Card className={clsx("image-card bg-dark text-white text-center", className)}>
       <Img
         objectFit="cover"
-        objectPosition="30% 70%"
+        objectPosition="20% 10%"
         className="image"
         fluid={data.file.childImageSharp.fluid}
         alt={imageAlt || header || subheader}
