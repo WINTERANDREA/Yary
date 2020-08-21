@@ -1,5 +1,14 @@
 const path = require("path");
-const { title, keywords, description, author, defaultLang, trackingId } = require("./config/site");
+const {
+  title,
+  keywords,
+  description,
+  author,
+  defaultLang,
+  trackingId,
+  image,
+  siteUrl,
+} = require("./config/site");
 
 module.exports = {
   siteMetadata: {
@@ -7,6 +16,8 @@ module.exports = {
     keywords,
     description,
     author,
+    image,
+    siteUrl,
   },
   plugins: [
     {
@@ -46,12 +57,21 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-sass",
       options: {
         data: `@import "core.scss";`,
         includePaths: [path.resolve(__dirname, "src/style")],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.ncctaximilano.com",
+        sitemap: "https://www.example.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     {

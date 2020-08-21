@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-const SEO = ({ lang, description, meta, keywords, title }) => {
+const SEO = ({ lang, description, meta, keywords, title, image }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +19,7 @@ const SEO = ({ lang, description, meta, keywords, title }) => {
             title
             description
             author
+            image
           }
         }
       }
@@ -26,6 +27,8 @@ const SEO = ({ lang, description, meta, keywords, title }) => {
   );
 
   const metaDescription = description || site.siteMetadata.description;
+
+  const metaImage = image || site.siteMetadata.image;
 
   return (
     <Helmet
@@ -48,6 +51,10 @@ const SEO = ({ lang, description, meta, keywords, title }) => {
           content: metaDescription,
         },
         {
+          property: `og:image`,
+          content: metaImage,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
@@ -67,6 +74,10 @@ const SEO = ({ lang, description, meta, keywords, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `twitter:image`,
+          content: metaImage,
+        },
       ]
         .concat(
           keywords.length > 0
@@ -77,7 +88,23 @@ const SEO = ({ lang, description, meta, keywords, title }) => {
             : [],
         )
         .concat(meta)}
-    />
+    >
+      <script type="application/ld+json">
+        {`
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "url": "https://nccmilano.netlify.app",
+          "name": "Ncc Taxi Milano",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+393393286640",
+            "contactType": "Customer Support"
+          }
+        }
+      `}
+      </script>
+    </Helmet>
   );
 };
 
@@ -87,6 +114,7 @@ SEO.propTypes = {
   meta: PropTypes.arrayOf(PropTypes.object),
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
 };
 
 SEO.defaultProps = {
@@ -94,6 +122,7 @@ SEO.defaultProps = {
   meta: [],
   keywords: [],
   description: "",
+  image: "",
 };
 
 export default SEO;
