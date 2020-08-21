@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 
 import { Container, Card } from "react-bootstrap";
+import { graphql, useStaticQuery } from "gatsby";
 import Image from "components/Image";
+import Img from "gatsby-image/withIEPolyfill";
 import "./ImageCard.scss";
 
 const ImageCard = ({
@@ -15,13 +17,24 @@ const ImageCard = ({
   extraInfo,
   children,
 }) => {
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "assets/images/head-6.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+  `);
   return (
     <Card className={clsx("image-card bg-dark text-white text-center", className)}>
-      <Image
+      <Img
         objectFit="cover"
-        objectPosition="left"
+        objectPosition="30% 70%"
         className="image"
-        fileName={imageFileName}
+        fluid={data.file.childImageSharp.fluid}
         alt={imageAlt || header || subheader}
       />
       <Card.ImgOverlay className="no-padding">
