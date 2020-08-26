@@ -24,6 +24,7 @@ const Footer = ({ frontmatter }) => {
         <Row className="align-items-center text-center">
           <Col lg={5} className="text-lg-left">
             {copyright}
+            {new Date().getFullYear()}
           </Col>
           <Col lg={3} className="my-3 my-lg-0">
             {twitter ? <SocialIcons.Twitter userName={twitter} /> : null}

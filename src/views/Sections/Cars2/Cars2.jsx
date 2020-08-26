@@ -26,7 +26,6 @@ const Cars2 = ({ className, frontmatter }) => {
               imageFileName,
               imageAlt,
               carName,
-              carDetails,
               seats,
               numberOfSeats,
               price,
@@ -40,7 +39,6 @@ const Cars2 = ({ className, frontmatter }) => {
                   fluid={imageFileName}
                   alt={imageAlt}
                   carName={carName}
-                  carDetails={carDetails}
                   seats={seats}
                   numberOfSeats={numberOfSeats}
                   price={price}

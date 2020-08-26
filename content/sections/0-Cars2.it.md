@@ -5,10 +5,10 @@ subheader: "Il miglior modo per iniziare il tuo viaggio"
 imageFileName: "cars/car-mercedesE200.jpeg"
 cars2: [
   {
-    imageFileName: "cars/car-mercedesE200.jpeg",
+    imageFileName: "cars/e200-mercedes.webp",
     imageAlt: "Mercedes E200",
     carName: "Mercedes E200",
-    carDetails: "Luxury car",
+ 
     seats: "seats",
     numberOfSeats: "5",
     price: "price",
@@ -18,10 +18,10 @@ cars2: [
     detailButton: "Details", 
   },
   {
-    imageFileName: "cars/car-mercedesVan.jpeg",
+    imageFileName: "cars/van-mercedes.webp",
     imageAlt: "Mercedes Van",
     carName: "Mercedes Van",
-    carDetails: "Luxury car",
+
     seats: "seats",
     numberOfSeats: "5",
     price: "price",
@@ -31,10 +31,10 @@ cars2: [
     detailButton: "Details", 
   },
    {
-    imageFileName: "cars/car-q7.jpeg",
-    imageAlt: "Q7",
-    carName: "Q7",
-    carDetails: "Luxury car",
+    imageFileName: "cars/q7-audi.webp",
+    imageAlt: "Audi Q7",
+    carName: "Audi Q7",
+
     seats: "seats",
     numberOfSeats: "5",
     price: "price",

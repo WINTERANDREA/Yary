@@ -7,6 +7,12 @@ import {
   faBars,
   faTimes,
   faGlobe,
+  faAward,
+  faUser,
+  faSuitcaseRolling,
+  faRoad,
+  faCreditCard,
+  faCar,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
@@ -17,6 +23,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export const PhoneIcon = makeFAIcon(faPhone);
+export const AwardIcon = makeFAIcon(faAward);
+export const SeatIcon = makeFAIcon(faUser);
+export const SuitcaseIcon = makeFAIcon(faSuitcaseRolling);
+export const RoadIcon = makeFAIcon(faRoad);
+export const CreditcardIcon = makeFAIcon(faCreditCard);
+export const CarIcon = makeFAIcon(faCar);
 export const EnvelopIcon = makeFAIcon(faEnvelope);
 export const PlusIcon = makeFAIcon(faPlus);
 export const BarsIcon = makeFAIcon(faBars);

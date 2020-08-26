@@ -1,5 +1,5 @@
 ---
-copyright: "Copyright © Wrabbit 2020"
+copyright: "NCC TAXI MILANO - Tutti i Diritti Riservati ©"
 social: {
   twitter: "#",
   facebook: "#",

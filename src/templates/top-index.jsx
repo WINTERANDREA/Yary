@@ -40,7 +40,6 @@ export const query = graphql`
             imageFileName
             imageAlt
             carName
-            carDetails
             seats
             numberOfSeats
             price

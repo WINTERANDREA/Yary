@@ -37,12 +37,7 @@ const Top = ({ frontmatter }) => {
 
   return (
     <>
-      <ImageCard
-        imageFileName={imageFileName}
-        header={header}
-        subheader={subheader}
-        extraInfo={extraInfoPart}
-      />
+      <ImageCard header={header} subheader={subheader} extraInfo={extraInfoPart} />
     </>
   );
 };

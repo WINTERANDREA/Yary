@@ -1,7 +1,10 @@
 .car-container {
+  width: 90% !important;
   overflow-y: hidden;
   position: relative;
-  height: 300px;
+  height: 500px;
+  border: 1px solid #212529;
+  border-top: none;
   &_img {
     position: absolute;
     top: 0;
@@ -12,24 +15,33 @@
   }
   &_desc {
     position: relative;
-    background-color: black;
-    color: white;
     z-index: 0;
     height: 100%;
   }
+  &_banner {
+    background: $gray-900;
+    padding: 10px;
+    color: $white;
+  }
   &_desc-button {
-    color: blue;
     position: absolute;
-    top: 80%;
+    top: 87%;
     z-index: 1;
     width: 100%;
     height: 100%;
   }
+  h2 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.car-icon {
+  margin: 0 10px;
 }
 
 .isDown {
   background-color: white;
-  transform: translateY(-450px);
+  transform: translateY(-550px);
   transition: transform 0.4s ease-in;
 }
 

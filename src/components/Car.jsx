@@ -5,11 +5,12 @@ import { div, button } from "react-bootstrap";
 import Image from "components/Image";
 import "./Car.scss";
 
+import Icon from "components/Icon";
+
 const Car = ({
   fluid,
   imageAlt,
   carName,
-  carDetails,
   seats,
   numberOfSeats,
   price,
@@ -23,14 +24,28 @@ const Car = ({
   return (
     <div className="car-container">
       <div className={`car-container_img ${isUp ? "isUp" : "isDown"}`}>
-        <Image fileName={fluid} alt={imageAlt} />
-        <h1>{carName}</h1>
+        <div className="car-container_banner">
+          <h2>{carName}</h2>
+        </div>
+        <Image className="my-auto " fileName={fluid} alt={imageAlt} />
       </div>
-      <div className="text-left pl-4 desc">
-        <h3 className="text-center pt-4 pb-5">{carDetails}</h3>
-        <p>{`${seats}: ${numberOfSeats}`}</p>
-        <p>{`${price}: €${amount}/Km`}</p>
-        <p>{`${luggage}: ${numberOfLuggage}`}</p>
+      <div className="text-left desc">
+        <div className="car-container_banner">
+          <h2 className="text-center">{carName}</h2>
+        </div>
+        <div style={{ display: "grid" }} />
+        <div style={{ display: "flex" }}>
+          <Icon iconName="SeatIcon" size="2x" className="car-icon" />
+          <p>{`${seats}: ${numberOfSeats}`}</p>
+        </div>
+        <div style={{ display: "flex" }}>
+          <Icon iconName="SuitcaseIcon" size="2x" className="car-icon" />
+          <p>{`${luggage}: ${numberOfLuggage}`}</p>
+        </div>
+        <div style={{ display: "flex" }}>
+          <Icon iconName="RoadIcon" size="2x" className="car-icon" />
+          <p>{`${price}: €${amount}/Km`}</p>
+        </div>
       </div>
       <div className="car-container_desc-button">
         <button type="button" onClick={() => setIsUp((prevState) => !prevState)}>
@@ -45,7 +60,6 @@ Car.propTypes = {
   fluid: PropTypes.string.isRequired,
   imageAlt: PropTypes.string,
   carName: PropTypes.string.isRequired,
-  carDetails: PropTypes.string,
   seats: PropTypes.string,
   numberOfSeats: PropTypes.string,
   price: PropTypes.string,
@@ -57,7 +71,6 @@ Car.propTypes = {
 
 Car.defaultProps = {
   imageAlt: "",
-  carDetails: "",
   seats: "",
   numberOfSeats: "",
   price: "",

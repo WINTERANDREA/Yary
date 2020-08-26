@@ -6,6 +6,7 @@ import { Row } from "react-bootstrap";
 import SectionHeader from "components/SectionHeader";
 import PageSection from "components/PageSection";
 import "./Pricing.scss";
+import Img from "gatsby-image";
 
 const Pricing = ({ className, frontmatter }) => {
   if (!frontmatter) {
@@ -15,11 +16,15 @@ const Pricing = ({ className, frontmatter }) => {
   const { anchor, header: rootHeader, subheader: rootSubHeader } = frontmatter;
 
   return (
-    <PageSection className={clsx("Pricing-section", className)} id={anchor}>
+    <PageSection
+      style={{ background: "#212529" }}
+      className={clsx("Pricing-section", className)}
+      id={anchor}
+    >
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>
-      <div style={{ fontSize: 50, color: "black" }}>CIAOOO</div>
+      <div style={{ fontSize: 50, color: "black" }}>ciao</div>
     </PageSection>
   );
 };
