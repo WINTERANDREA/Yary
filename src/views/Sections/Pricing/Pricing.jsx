@@ -2,13 +2,26 @@ import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
-import { Row } from "react-bootstrap";
+import { Row, Card, Container } from "react-bootstrap";
 import SectionHeader from "components/SectionHeader";
 import PageSection from "components/PageSection";
+import { graphql, useStaticQuery } from "gatsby";
 import "./Pricing.scss";
-import Img from "gatsby-image";
+import Img from "gatsby-image/withIEPolyfill";
 
 const Pricing = ({ className, frontmatter }) => {
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "assets/images/highway.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+  `);
+
   if (!frontmatter) {
     return null;
   }
@@ -16,16 +29,39 @@ const Pricing = ({ className, frontmatter }) => {
   const { anchor, header: rootHeader, subheader: rootSubHeader } = frontmatter;
 
   return (
-    <PageSection
-      style={{ background: "#212529" }}
+    <section
       className={clsx("Pricing-section", className)}
+      style={{ background: "#212529" }}
       id={anchor}
     >
-      <Row>
-        <SectionHeader header={rootHeader} subheader={rootSubHeader} />
-      </Row>
-      <div style={{ fontSize: 50, color: "black" }}>ciao</div>
-    </PageSection>
+      <Card className={clsx("image-card bg-dark text-white text-center", className)}>
+        <Img
+          fluid={data.file.childImageSharp.fluid}
+          alt="pricing"
+          objectFit="cover"
+          objectPosition="20% 10%"
+          className="image"
+        />
+        <Card.ImgOverlay className="no-padding" style={{ background: "rgba(254, 211, 54, 0.475)" }}>
+          <Container>
+            <div className="pricing-text">
+              <SectionHeader
+                style={{ color: "#252729", marginTop: 30 }}
+                header={rootHeader}
+                subheader={rootSubHeader}
+              />
+              <div style={{ marginTop: 50 }}>
+                <h3>Milano - Bergamo | 60 Minuti | 150€</h3>
+                <h3>Milano - Malpensa| 45 Minuti | 90€</h3>
+                <h3>Milano - Linate | 30 Minuti | 75€</h3>
+                <h3>Milano - Roma| 5 Ore | 900€</h3>
+                <h3>Milano - Napoli| 8 Ore | 1800€</h3>
+              </div>
+            </div>
+          </Container>
+        </Card.ImgOverlay>
+      </Card>
+    </section>
   );
 };
 

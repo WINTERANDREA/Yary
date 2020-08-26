@@ -4,7 +4,7 @@ span {
 
 h6.button-text {
   margin-bottom: 0 !important;
-  color: $gray-900;
+  color: $primary;
   justify-self: start;
   font-size: 14px;
   font-weight: 700;
@@ -12,26 +12,25 @@ h6.button-text {
 }
 
 .icon-call {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+  display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
   border-radius: 5px;
-  background-color: $primary;
+  background-color: $gray-900;
+  border: 1px solid $primary;
   box-shadow: 1px 1px 3px $primary;
-  color: white;
-  padding-left: 5px;
-
+  color: $primary;
   width: 230px;
   height: 40px;
 
   &:hover {
     color: transparent;
-    background-color: $gray-900;
-    border: 1px solid $primary;
+    background-color: $primary;
+    border: 1px solid $gray-900;
     box-shadow: 1px 1px 3px $gray-900;
     h6.button-text {
-      color: $primary;
+      color: $gray-900;
     }
   }
   &_image {

@@ -1,5 +1,4 @@
 .car-container {
-  width: 90% !important;
   overflow-y: hidden;
   position: relative;
   height: 500px;
@@ -82,7 +81,7 @@
 
 .isDown {
   background-color: white;
-  transform: translateY(-550px);
+  transform: translateY(-650px);
   transition: transform 0.4s ease-in;
 }
 

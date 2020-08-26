@@ -34,7 +34,7 @@ const Cars2 = ({ className, frontmatter }) => {
               numberOfLuggage,
               detailButton,
             }) => (
-              <Col key={carName} xs={12} xl={4} className="mt-5 mt-sm-0">
+              <Col key={carName} xs={12} lg={4} xl={4} className="mt-5 mt-sm-0">
                 <Car
                   fluid={imageFileName}
                   alt={imageAlt}
