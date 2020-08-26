@@ -27,24 +27,33 @@ const Car = ({
         <div className="car-container_banner">
           <h2>{carName}</h2>
         </div>
-        <Image className="my-auto " fileName={fluid} alt={imageAlt} />
+        <Image style={{ marginTop: 125 }} fileName={fluid} alt={imageAlt} />
       </div>
-      <div className="text-left desc">
+      <div>
         <div className="car-container_banner">
           <h2 className="text-center">{carName}</h2>
         </div>
-        <div style={{ display: "grid" }} />
-        <div style={{ display: "flex" }}>
+
+        <div className="car-description">
           <Icon iconName="SeatIcon" size="2x" className="car-icon" />
-          <p>{`${seats}: ${numberOfSeats}`}</p>
+          <div className="car-description_text">
+            <h5>{seats}: </h5>
+            <h3>{numberOfSeats}&nbsp;</h3>
+          </div>
         </div>
-        <div style={{ display: "flex" }}>
+        <div className="car-description">
           <Icon iconName="SuitcaseIcon" size="2x" className="car-icon" />
-          <p>{`${luggage}: ${numberOfLuggage}`}</p>
+          <div className="car-description_text">
+            <h5>{luggage}: </h5>
+            <h3>{numberOfLuggage}&nbsp;</h3>
+          </div>
         </div>
-        <div style={{ display: "flex" }}>
+        <div className="car-description">
           <Icon iconName="RoadIcon" size="2x" className="car-icon" />
-          <p>{`${price}: €${amount}/Km`}</p>
+          <div className="car-description_text">
+            <h5>{price}: </h5>
+            <h3>{amount}&nbsp;</h3>
+          </div>
         </div>
       </div>
       <div className="car-container_desc-button">

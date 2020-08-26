@@ -4,19 +4,10 @@ import clsx from "clsx";
 
 import { Container, Card } from "react-bootstrap";
 import { graphql, useStaticQuery } from "gatsby";
-import Image from "components/Image";
 import Img from "gatsby-image/withIEPolyfill";
 import "./ImageCard.scss";
 
-const ImageCard = ({
-  className,
-  imageFileName,
-  imageAlt,
-  header,
-  subheader,
-  extraInfo,
-  children,
-}) => {
+const ImageCard = ({ className, imageAlt, header, subheader, extraInfo, children }) => {
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "assets/images/head-6.jpg" }) {
@@ -52,7 +43,6 @@ const ImageCard = ({
 
 ImageCard.propTypes = {
   className: PropTypes.string,
-  imageFileName: PropTypes.string,
   imageAlt: PropTypes.string,
   header: PropTypes.string,
   subheader: PropTypes.string,
@@ -62,7 +52,6 @@ ImageCard.propTypes = {
 
 ImageCard.defaultProps = {
   className: null,
-  imageFileName: null,
   imageAlt: null,
   header: "",
   subheader: "",

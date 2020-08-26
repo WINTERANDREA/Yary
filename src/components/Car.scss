@@ -5,6 +5,7 @@
   height: 500px;
   border: 1px solid #212529;
   border-top: none;
+  margin-bottom: 40px;
   &_img {
     position: absolute;
     top: 0;
@@ -13,25 +14,65 @@
     width: 100%;
     height: 100%;
   }
-  &_desc {
-    position: relative;
-    z-index: 0;
-    height: 100%;
-  }
+
   &_banner {
     background: $gray-900;
     padding: 10px;
-    color: $white;
+    color: $primary;
   }
   &_desc-button {
     position: absolute;
-    top: 87%;
+    top: 85%;
     z-index: 1;
     width: 100%;
     height: 100%;
+
+    button {
+      background: $gray-900;
+      color: $primary;
+      border: none;
+      border-radius: 5px;
+      height: 40px;
+      width: 130px;
+      box-shadow: 1px 1px 3px $gray-900;
+      &:hover {
+        background: $primary;
+        color: $gray-900;
+        border: $gray-900;
+        box-shadow: 1px 1px 3px $primary;
+      }
+      h6 {
+        margin-bottom: 0;
+      }
+    }
   }
   h2 {
     margin-bottom: 0 !important;
+  }
+}
+
+.car-description {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  &_text {
+    display: flex;
+    margin-top: 10px;
+
+    h5 {
+      align-self: center;
+      text-decoration: underline;
+      text-decoration-color: $primary;
+    }
+    h3 {
+      margin-left: 8px;
+      color: $primary;
+      font-size: 40px;
+    }
   }
 }
 

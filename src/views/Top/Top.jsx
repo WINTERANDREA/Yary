@@ -16,7 +16,6 @@ const Top = ({ frontmatter }) => {
   const {
     header,
     subheader,
-    imageFileName,
     jumpToAnchor,
     jumpToAnchorText,
     telefono,
