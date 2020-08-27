@@ -9,7 +9,7 @@ import "./PageSection.scss";
 const PageSection = ({ children, className, ...restProps }) => {
   return (
     <section className={clsx("page-section", className)} {...restProps}>
-      <Container>{children}</Container>
+      <Container fluid>{children}</Container>
     </section>
   );
 };

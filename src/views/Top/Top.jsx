@@ -28,7 +28,7 @@ const Top = ({ frontmatter }) => {
   if (jumpToAnchor && jumpToAnchorText) {
     extraInfoPart = (
       <Button size="xl" variant="primary" className="button">
-        {jumpToAnchorText}
+        <h2 className="subheader-infame">{jumpToAnchorText}</h2>
         <IconCallSet telefono={telefono} whatsapp={whatsapp} telegram={telegram} />
       </Button>
     );

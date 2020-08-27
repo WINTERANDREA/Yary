@@ -6,12 +6,14 @@ import { Col } from "react-bootstrap";
 import "./SectionHeader.scss";
 
 const SectionHeader = ({ header, subheader, className, ...restProps }) => {
-  const subheaderPart = subheader ? <h3 className="section-subheading">{subheader}</h3> : null;
+  const subheaderPart = subheader ? (
+    <h3 className="section-subheading mx-auto">{subheader}</h3>
+  ) : null;
 
   return (
     <Col lg={12} className={clsx("section-header", "text-center", className)} {...restProps}>
       <h2 className="section-heading text-uppercase">{header}</h2>
-      <div style={{ padding: "0 20px" }}>{subheaderPart}</div>
+      <div>{subheaderPart}</div>
     </Col>
   );
 };

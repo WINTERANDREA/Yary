@@ -15,11 +15,11 @@ const Cars2 = ({ className, frontmatter }) => {
   const { anchor, header: rootHeader, subheader: rootSubHeader, cars2 } = frontmatter;
 
   return (
-    <PageSection className={clsx("cars2-section", className)} id={anchor}>
+    <PageSection style={{ width: "100%" }} className={clsx("cars2-section", className)} id={anchor}>
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>
-      <Container className="text-center mt-5" style={{ position: "relative" }}>
+      <Container className="text-center mt-5 mx-auto" style={{ position: "relative", margin: 0 }}>
         <Row>
           {cars2.map(
             ({
@@ -34,7 +34,7 @@ const Cars2 = ({ className, frontmatter }) => {
               numberOfLuggage,
               detailButton,
             }) => (
-              <Col key={carName} xs={12} lg={4} xl={4} className="mt-5 mt-sm-0">
+              <Col key={carName} xs={12} lg={4} xl={4} className="mt-5 mt-sm-0 px-1">
                 <Car
                   fluid={imageFileName}
                   alt={imageAlt}

@@ -13,7 +13,9 @@ const IconCall = ({ href, iconCallName, buttonText }) => (
       rel="noopener noreferrer"
       aria-label={iconCallName}
     >
-      <Image fileName={iconCallName} className="icon-call_image" />
+      <div style={{ width: 35, height: 35 }}>
+        <Image fileName={iconCallName} className="icon-call_image" />
+      </div>
       <h6 className="button-text">{buttonText}</h6>
     </a>
   </span>

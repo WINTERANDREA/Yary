@@ -1,7 +1,7 @@
 ---
 anchor: "Autovetture"
 header: "Scegli la comodità"
-subheader: "Muoversi con Ncc Taxi Milano in alternativa a voli, treni o noleggio auto significa evitare la folla e stare al sicuro durante l'intero viaggio. Invece di sopportare lunghe code e svariate chiamate prima ancora di partire, goditi il comfort di un veicolo privato e di prima qualità. Con noi la comodità dei tuoi spostamenti è più confortevole che mai, i nostri autisti garantiscono totale discrezione lasciandoti lo spazio e la privacy di cui hai bisogno per offrirti il miglior viaggio possibile."
+subheader: "Muoversi con Ncc Taxi Milano in alternativa a voli, treni o noleggio auto significa evitare la folla e stare al sicuro durante l'intero viaggio.Invece di sopportare lunghe code e svariate chiamate prima ancora di partire, goditi il comfort di un veicolo privato e di prima qualità. Con noi la comodità dei tuoi spostamenti è più confortevole che mai, i nostri autisti garantiscono totale discrezione lasciandoti lo spazio e la privacy di cui hai bisogno per offrirti il miglior viaggio possibile."
 cars2: [
   {
     imageFileName: "cars/e200-mercedes.png",
