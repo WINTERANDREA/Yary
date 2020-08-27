@@ -27,18 +27,19 @@
     height: 100%;
 
     button {
-      background: $gray-900;
-      color: $primary;
-      border: none;
+      background: $primary;
+      color: $gray-900;
       border-radius: 5px;
       height: 40px;
       width: 130px;
-      box-shadow: 1px 1px 3px $gray-900;
+      border: $gray-900;
+      box-shadow: 1px 1px 3px $primary;
+
       &:hover {
-        background: $primary;
-        color: $gray-900;
-        border: $gray-900;
-        box-shadow: 1px 1px 3px $primary;
+        background: $gray-900;
+        color: $primary;
+        border: $primary;
+        box-shadow: 1px 1px 3px $gray-900;
       }
       h6 {
         margin-bottom: 0;

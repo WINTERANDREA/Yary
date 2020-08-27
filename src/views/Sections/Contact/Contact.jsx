@@ -22,10 +22,13 @@ const Contact = ({ className, frontmatter }) => {
         </Col>
       </Row>
       <Row>
-        <Col lg={4} className="ml-auto text-center">
+        <Col lg={4} className="ml-auto text-center mb-4">
           <Icon iconName="PhoneIcon" size="3x" className="text-muted mb-3" />
-          <a className="d-block" href="tel:+393392153194">
+          <a className="d-block mb-2" href="tel:+393392153194">
             +39 3392153194
+          </a>
+          <a className="d-block" href="tel:+393356293248">
+            +39 3356293248
           </a>
         </Col>
         <Col lg={4} className="mr-auto text-center">
