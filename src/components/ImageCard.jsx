@@ -28,7 +28,17 @@ const ImageCard = ({ className, imageAlt, header, subheader, extraInfo, children
         fluid={data.file.childImageSharp.fluid}
         alt={imageAlt || header || subheader}
       />
-      <Card.ImgOverlay className="no-padding">
+
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          background: "rgba(254, 211, 54, 0.2)",
+        }}
+      >
         <Container>
           <div className="intro-text">
             <div className="intro-heading text-uppercase">{header}</div>
@@ -36,7 +46,7 @@ const ImageCard = ({ className, imageAlt, header, subheader, extraInfo, children
             {children}
           </div>
         </Container>
-      </Card.ImgOverlay>
+      </div>
     </Card>
   );
 };

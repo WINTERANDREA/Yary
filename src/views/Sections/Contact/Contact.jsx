@@ -24,14 +24,14 @@ const Contact = ({ className, frontmatter }) => {
       <Row>
         <Col lg={4} className="ml-auto text-center">
           <Icon iconName="PhoneIcon" size="3x" className="text-muted mb-3" />
-          <a className="d-block" href={`tel:${telephone}`}>
-            {telephone}
+          <a className="d-block" href="tel:+393392153194">
+            +39 3392153194
           </a>
         </Col>
         <Col lg={4} className="mr-auto text-center">
           <Icon iconName="EnvelopIcon" size="3x" className="text-muted mb-3" />
-          <a className="d-block" href={`mailto:${email}`}>
-            {email}
+          <a className="d-block" href="mailto:yarigirardi@gmail.com">
+            yarigirardi@gmail.com
           </a>
         </Col>
       </Row>

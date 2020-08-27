@@ -5,6 +5,12 @@
   line-height: 22px !important;
   background-color: transparent !important;
   margin-top: 15px;
+
+  &:focus,
+  &:active,
+  &:visited {
+    box-shadow: none !important;
+  }
 }
 
 @media (min-width: 360px) {

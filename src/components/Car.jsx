@@ -25,13 +25,13 @@ const Car = ({
     <div className="car-container">
       <div className={`car-container_img ${isUp ? "isUp" : "isDown"}`}>
         <div className="car-container_banner">
-          <h2>{carName}</h2>
+          <h2 className="car-name">{carName}</h2>
         </div>
         <Image style={{ marginTop: 125 }} fileName={fluid} alt={imageAlt} />
       </div>
       <div>
         <div className="car-container_banner">
-          <h2 className="text-center">{carName}</h2>
+          <h2 className="car-name">{carName}</h2>
         </div>
 
         <div className="car-description">

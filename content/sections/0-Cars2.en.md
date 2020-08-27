@@ -1,7 +1,7 @@
 ---
 anchor: "Cars"
-header: "Cars"
-subheader: "A great way to start your journey"
+header: "Stress-free solution"
+subheader: "Booking our rides as an alternative to flights, trains, or car rentals means avoiding the crowds and staying safe on your journey. Instead of enduring long lines and multiple interactions before you even hit the road, you just enjoy the comfort of a private, top-of-the-line vehicle. With Ncc Taxi Milano's rides, the ease of long or short travel is more comfortable than ever. Our chauffeurs are bound by discretion and give you the space and privacy you need to deliver your best."
 imageFileName: "cars/car-mercedesE200.jpeg"
 cars2: [
   {

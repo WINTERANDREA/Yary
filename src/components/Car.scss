@@ -79,6 +79,10 @@
   margin: 0 10px;
 }
 
+.car-name {
+  @include car-font;
+}
+
 .isDown {
   background-color: white;
   transform: translateY(-650px);

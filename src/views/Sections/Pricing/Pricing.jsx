@@ -8,6 +8,7 @@ import PageSection from "components/PageSection";
 import { graphql, useStaticQuery } from "gatsby";
 import "./Pricing.scss";
 import Img from "gatsby-image/withIEPolyfill";
+import { none } from "ramda";
 
 const Pricing = ({ className, frontmatter }) => {
   const data = useStaticQuery(graphql`
@@ -42,11 +43,20 @@ const Pricing = ({ className, frontmatter }) => {
           objectPosition="20% 10%"
           className="image"
         />
-        <Card.ImgOverlay className="no-padding" style={{ background: "rgba(254, 211, 54, 0.475)" }}>
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: "rgba(0,0,0,.2)",
+          }}
+        >
           <Container>
             <div className="pricing-text">
               <SectionHeader
-                style={{ color: "#252729", marginTop: 30 }}
+                style={{ color: "#fed136", marginTop: 30 }}
                 header={rootHeader}
                 subheader={rootSubHeader}
               />
@@ -59,7 +69,7 @@ const Pricing = ({ className, frontmatter }) => {
               </div>
             </div>
           </Container>
-        </Card.ImgOverlay>
+        </div>
       </Card>
     </section>
   );

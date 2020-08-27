@@ -93,6 +93,10 @@ module.exports = {
             family: "Roboto+Slab",
             variants: [400, 100, 300, 700],
           },
+          {
+            family: "Cardo",
+            variants: [400, 700],
+          },
         ],
       },
     },
