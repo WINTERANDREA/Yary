@@ -36,7 +36,7 @@ const ImageCard = ({ className, imageAlt, header, subheader, extraInfo, children
           left: 0,
           width: "100%",
           height: "100%",
-          background: "rgba(254, 211, 54, 0.2)",
+          background: "rgba(0,0,0, 0.2)",
         }}
       >
         <Container>
