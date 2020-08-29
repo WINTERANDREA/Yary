@@ -5,7 +5,7 @@ import "./IconCallSet.scss";
 
 const IconCallSet = ({ telefono, whatsapp, telegram }) => {
   return (
-    <div className="icon-call-set">
+    <div className="icon-call-set mx-auto">
       <IconCall href="tel:+393392153194" iconCallName="phone6.png" buttonText={telefono} />
       <IconCall
         href="https://wa.me/393392153194?text=Salve,%20avrei%20bisogno%20di%20un%20passaggio%20a%20"

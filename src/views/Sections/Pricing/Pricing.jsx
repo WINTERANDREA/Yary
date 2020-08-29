@@ -9,6 +9,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import "./Pricing.scss";
 import Img from "gatsby-image/withIEPolyfill";
 import { none } from "ramda";
+import TableRoutes from "components/TableRoutes";
 
 const Pricing = ({ className, frontmatter }) => {
   const data = useStaticQuery(graphql`
@@ -27,7 +28,17 @@ const Pricing = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { anchor, header: rootHeader, subheader: rootSubHeader } = frontmatter;
+  const {
+    anchor,
+    header: rootHeader,
+    subheader: rootSubHeader,
+    Route,
+    Price,
+    Duration,
+    Disclaimer,
+    HeadText,
+    HeadDescription,
+  } = frontmatter;
 
   return (
     <section
@@ -35,7 +46,9 @@ const Pricing = ({ className, frontmatter }) => {
       style={{ background: "#212529" }}
       id={anchor}
     >
-      <Card className={clsx("image-card bg-dark text-white text-center", className)}>
+      <Card
+        className={clsx("image-card image-card-pricing bg-dark text-white text-center", className)}
+      >
         <Img
           fluid={data.file.childImageSharp.fluid}
           alt="pricing"
@@ -53,19 +66,29 @@ const Pricing = ({ className, frontmatter }) => {
             background: "rgba(0,0,0,.2)",
           }}
         >
-          <Container>
+          <Container
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              height: "100%",
+            }}
+          >
             <div className="pricing-text">
               <SectionHeader
-                style={{ color: "#fed136", marginTop: 30 }}
+                className="header-pricing"
                 header={rootHeader}
                 subheader={rootSubHeader}
               />
               <div style={{ marginTop: 50 }}>
-                <h3>Milano - Bergamo | 60 Minuti | 150€</h3>
-                <h3>Milano - Malpensa| 45 Minuti | 90€</h3>
-                <h3>Milano - Linate | 30 Minuti | 75€</h3>
-                <h3>Milano - Roma| 5 Ore | 900€</h3>
-                <h3>Milano - Napoli| 8 Ore | 1800€</h3>
+                <TableRoutes
+                  Route={Route}
+                  Duration={Duration}
+                  Price={Price}
+                  Disclaimer={Disclaimer}
+                />
+                <h4 style={{ marginTop: 60 }}>{HeadText}</h4>
+                <p>{HeadDescription}</p>
               </div>
             </div>
           </Container>

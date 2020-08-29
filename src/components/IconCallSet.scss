@@ -2,10 +2,17 @@
   margin-top: 28px;
   display: grid;
   gap: 1rem;
+  max-width: 70%;
 }
 
 @media (min-width: 768px) {
   .icon-call-set {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .icon-call-set {
+    max-width: 100%;
   }
 }

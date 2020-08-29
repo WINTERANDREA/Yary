@@ -24,19 +24,10 @@ const Top = ({ frontmatter }) => {
   } = frontmatter;
   // eslint-disable-next-line react-hooks/rules-of-hooks
 
-  let extraInfoPart;
-  if (jumpToAnchor && jumpToAnchorText) {
-    extraInfoPart = (
-      <Button size="xl" variant="primary" className="button">
-        <h2 className="subheader-infame">{jumpToAnchorText}</h2>
-        <IconCallSet telefono={telefono} whatsapp={whatsapp} telegram={telegram} />
-      </Button>
-    );
-  }
-
+  const icon = <IconCallSet telefono={telefono} whatsapp={whatsapp} telegram={telegram} />;
   return (
     <>
-      <ImageCard header={header} subheader={subheader} extraInfo={extraInfoPart} />
+      <ImageCard header={header} subheader={subheader} extraInfo={icon} />
     </>
   );
 };

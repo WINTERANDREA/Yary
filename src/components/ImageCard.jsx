@@ -31,20 +31,28 @@ const ImageCard = ({ className, imageAlt, header, subheader, extraInfo, children
 
       <div
         style={{
+          display: "flex",
+          alignItems: "center",
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          background: "rgba(0,0,0, 0.2)",
+          background: "linear-gradient(to top, rgba(0,0,0, 0.6),rgba(0,0,0, 0)",
         }}
       >
-        <Container>
-          <div className="intro-text">
-            <div className="intro-heading text-uppercase">{header}</div>
-            {extraInfo}
-            {children}
-          </div>
+        <Container
+          style={{
+            height: "50%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <h1 className="intro-heading text-uppercase">{header}</h1>
+          <h3 className="my-0 py-3">{subheader}</h3>
+          {extraInfo}
+          {children}
         </Container>
       </div>
     </Card>

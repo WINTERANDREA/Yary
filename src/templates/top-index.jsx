@@ -54,7 +54,11 @@ export const query = graphql`
           }
           content
           copyright
+          Disclaimer
+          Duration
           header
+          HeadText
+          HeadDescription
           email
           imageFileName
           jumpToAnchor
@@ -68,8 +72,10 @@ export const query = graphql`
             imageFileNameDetail
             imageFileName
           }
+          Price
           privacyHref
           privacyText
+          Route
           seoTitle
           seoDescription
           seoKeywords

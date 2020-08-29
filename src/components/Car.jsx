@@ -33,26 +33,27 @@ const Car = ({
         <div className="car-container_banner">
           <h2 className="car-name">{carName}</h2>
         </div>
-
-        <div className="car-description">
-          <Icon iconName="SeatIcon" size="2x" className="car-icon" />
-          <div className="car-description_text">
-            <h5>{seats}: </h5>
-            <h3>{numberOfSeats}&nbsp;</h3>
+        <div>
+          <div className="car-description">
+            <Icon iconName="SeatIcon" size="2x" className="car-icon" />
+            <div className="car-description_text">
+              <h5>{seats}: </h5>
+              <h3>{numberOfSeats}&nbsp;</h3>
+            </div>
           </div>
-        </div>
-        <div className="car-description">
-          <Icon iconName="SuitcaseIcon" size="2x" className="car-icon" />
-          <div className="car-description_text">
-            <h5>{luggage}: </h5>
-            <h3>{numberOfLuggage}&nbsp;</h3>
+          <div className="car-description">
+            <Icon iconName="SuitcaseIcon" size="2x" className="car-icon" />
+            <div className="car-description_text">
+              <h5>{luggage}: </h5>
+              <h3>{numberOfLuggage}&nbsp;</h3>
+            </div>
           </div>
-        </div>
-        <div className="car-description">
-          <Icon iconName="RoadIcon" size="2x" className="car-icon" />
-          <div className="car-description_text">
-            <h5>{price}: </h5>
-            <h3>{amount}&nbsp;</h3>
+          <div className="car-description">
+            <Icon iconName="RoadIcon" size="2x" className="car-icon" />
+            <div className="car-description_text">
+              <h5>{price}: </h5>
+              <h3>{amount}&nbsp;</h3>
+            </div>
           </div>
         </div>
       </div>

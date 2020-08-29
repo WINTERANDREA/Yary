@@ -13,6 +13,7 @@ import {
   faRoad,
   faCreditCard,
   faCar,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
@@ -26,6 +27,7 @@ export const PhoneIcon = makeFAIcon(faPhone);
 export const AwardIcon = makeFAIcon(faAward);
 export const SeatIcon = makeFAIcon(faUser);
 export const SuitcaseIcon = makeFAIcon(faSuitcaseRolling);
+export const ArrowRight = makeFAIcon(faArrowRight);
 export const RoadIcon = makeFAIcon(faRoad);
 export const CreditcardIcon = makeFAIcon(faCreditCard);
 export const CarIcon = makeFAIcon(faCar);

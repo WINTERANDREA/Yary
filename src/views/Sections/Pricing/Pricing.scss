@@ -1,0 +1,19 @@
+.header-pricing {
+  color: $primary;
+}
+
+.image-card-pricing {
+  height: 1200px;
+}
+
+@media (min-width: 360px) {
+  .image-card-pricing {
+    height: 1100px;
+  }
+}
+
+@media (min-width: 500px) {
+  .image-card-pricing {
+    height: 100vh;
+  }
+}
