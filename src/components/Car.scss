@@ -95,3 +95,18 @@
   transform: translateY(0);
   transition: transform 0.4s ease-in;
 }
+
+.margin-top-car {
+  margin-top: 125px;
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+ .margin-top-car {
+  margin-top: 50px;
+}
+}
+@media (min-width: 769px) and (max-width: 991px) {
+ .margin-top-car {
+  margin-top: 10px;
+}
+}

@@ -59,6 +59,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
+    "gatsby-background-image",
     {
       resolve: "gatsby-plugin-sass",
       options: {

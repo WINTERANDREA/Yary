@@ -10,6 +10,7 @@ import "./Pricing.scss";
 import Img from "gatsby-image/withIEPolyfill";
 import { none } from "ramda";
 import TableRoutes from "components/TableRoutes";
+import BackgroundImg from "components/BackgroundImg";
 
 const Pricing = ({ className, frontmatter }) => {
   const data = useStaticQuery(graphql`
@@ -46,32 +47,14 @@ const Pricing = ({ className, frontmatter }) => {
       style={{ background: "#212529" }}
       id={anchor}
     >
-      <Card
-        className={clsx("image-card image-card-pricing bg-dark text-white text-center", className)}
-      >
-        <Img
-          fluid={data.file.childImageSharp.fluid}
-          alt="pricing"
-          objectFit="cover"
-          objectPosition="20% 10%"
-          className="image"
-        />
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            background: "rgba(0,0,0,.2)",
-          }}
-        >
-          <Container
+      <BackgroundImg containerStyle={{padding: '80px 0'}} bgLayer='rgba(0,0,0,.2)' bgImage={data.file.childImageSharp.fluid} >
+       <Container
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               height: "100%",
+              color: 'white'
             }}
           >
             <div className="pricing-text">
@@ -92,8 +75,7 @@ const Pricing = ({ className, frontmatter }) => {
               </div>
             </div>
           </Container>
-        </div>
-      </Card>
+      </BackgroundImg>
     </section>
   );
 };

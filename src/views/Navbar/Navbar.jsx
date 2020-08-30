@@ -38,7 +38,7 @@ const MyNavbar = ({ anchors, frontmatter, extraItems }) => {
 
   return (
     <Navbar
-      className={clsx("navbar-root", { "navbar-shrink": shrink })}
+      className={clsx("navbar-root absolute-top", { "navbar-shrink": shrink })}
       expand="lg"
       expanded={expanded}
     >
