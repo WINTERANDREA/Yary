@@ -1,17 +1,22 @@
 .padding-bg-top {
-  padding: 90px 0
+  padding: 90px 0;
 }
 
-@media(min-height: 641px) {
+@media (min-height: 641px) {
   .padding-bg-top {
-  padding: 160px 0
+    padding: 160px 0;
+  }
 }
 
-}
-
-@media(min-height: 736px) {
+@media (min-height: 736px) {
   .padding-bg-top {
-  padding: 185px 0
+    padding: 185px 0;
+  }
 }
 
+@media (min-width: 1200px) {
+  .padding-bg-top {
+    padding: 280px 0;
+    height: 100vh;
+  }
 }
