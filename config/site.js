@@ -13,7 +13,7 @@ module.exports = {
   description: "Servizio Noleggio Con Conducente Milano Bergamo",
   image: "head-5.jpg",
   author: "NCC TAXI MILANO",
-  trackingId: "123",
+  trackingId: "UA-176822328-1",
   siteUrl: "https://www.ncctaximilano.com",
   defaultLang: "it",
   langTextMap: {
