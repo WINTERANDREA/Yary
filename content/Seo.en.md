@@ -1,6 +1,6 @@
 ---
 seoTitle: "Taxi Driver Milan"
-seoDescription: "NCC TAXI MILANO. Your private driver in Milan. Book your ride now for less than 2€/km. Contact us on telephon, whatsapp or telegram"
+seoDescription: "YOUR PRIVATE DRIVER IN MILAN. Book your ride now for less than 2€/km. Telephone.Whatsapp.Telegram. Enjoy the comfort.. "
 seoKeywords: [
     "taxi",
     "ncc",
