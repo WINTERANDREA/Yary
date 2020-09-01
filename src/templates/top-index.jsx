@@ -76,6 +76,7 @@ export const query = graphql`
           privacyHref
           privacyText
           Route
+          seoImage
           seoTitle
           seoDescription
           seoKeywords
@@ -137,7 +138,7 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
     allMarkdownRemark: { nodes },
   } = data;
 
-  const { seoTitle, seoDescription, seoKeywords } = nodes[2].frontmatter;
+  const { seoTitle, seoDescription, seoKeywords, seoImage } = nodes[2].frontmatter;
 
   const { topNode, navBarNode, anchors, footerNode, sectionsNodes } = breakDownAllNodes(nodes);
 
@@ -150,7 +151,13 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
 
   return (
     <>
-      <SEO lang={langKey} title={seoTitle} keywords={seoKeywords} description={seoDescription} />
+      <SEO
+        lang={langKey}
+        title={seoTitle}
+        keywords={seoKeywords}
+        description={seoDescription}
+        image={seoImage}
+      />
       <Navbar
         anchors={anchors}
         frontmatter={navBarNode.frontmatter}

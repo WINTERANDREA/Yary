@@ -1,6 +1,7 @@
 ---
-seoTitle: "Ncc Taxi Milano"
+seoTitle: "Noleggio Con Conducente"
 seoDescription: "IL TUO AUTISTA PRIVATO A MILANO. Prenota subito la tua corsa a meno di 2€/Km. Telefono. Whatsapp.Telegram. Scegli la comodità.."
+seoImage: "snapshot-it.jpg"
 seoKeywords: [
     "taxi",
     "ncc",
