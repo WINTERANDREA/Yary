@@ -50,6 +50,10 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
           content: metaDescription,
         },
         {
+          property: `og:url`,
+          content: "https://www.ncctaximilano.com",
+        },
+        {
           property: `og:image`,
           content: metaImage,
           itemprop: "image",
