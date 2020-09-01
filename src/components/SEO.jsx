@@ -28,7 +28,8 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
 
   const metaDescription = { description } || site.siteMetadata.description;
 
-  const metaImage = { image } || site.siteMetadata.image;
+  const metaImage = site.siteMetadata.image;
+  const metaKeyword = { keywords } || site.siteMetadata.image;
 
   return (
     <Helmet
@@ -80,10 +81,10 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
         },
       ]
         .concat(
-          keywords.length > 0
+          metaKeyword.length > 0
             ? {
                 name: `keywords`,
-                content: keywords.join(`, `),
+                content: metaKeyword.join(`, `),
               }
             : [],
         )
@@ -105,7 +106,6 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
       `}
       </script>
       <meta name="google-site-verification" content="MqL6NY4tpQCl9qB9ognOtARm2QxUp1OTyfS53RdKmVE" />
-      <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
     </Helmet>
   );
 };
