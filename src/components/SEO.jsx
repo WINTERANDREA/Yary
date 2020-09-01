@@ -36,7 +36,6 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -53,6 +52,7 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
         {
           property: `og:image`,
           content: metaImage,
+          itemprop: "image",
         },
         {
           property: `og:type`,
@@ -98,17 +98,22 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
         {
           "@context": "http://schema.org",
           "@type": "Organization",
-          "url": "https://nccmilano.netlify.app",
+          "url": "https://www.ncctaximilano.com/",
           "name": "Ncc Taxi Milano",
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+393393286640",
+            "telephone": "+393392153194",
             "contactType": "Customer Support"
           }
         }
       `}
       </script>
-      <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
+      <link
+        rel="icon"
+        type="image/png"
+        href="https://www.ncctaximilano.com/images/favicon.ico"
+        sizes="16x16"
+      />
     </Helmet>
   );
 };
