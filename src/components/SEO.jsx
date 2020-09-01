@@ -78,6 +78,10 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
           name: `twitter:image`,
           content: metaImage,
         },
+        {
+          name: "google-site-verification",
+          content: "MqL6NY4tpQCl9qB9ognOtARm2QxUp1OTyfS53RdKmVE",
+        },
       ]
         .concat(
           keywords.length > 0
@@ -104,6 +108,7 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
         }
       `}
       </script>
+      <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
     </Helmet>
   );
 };
