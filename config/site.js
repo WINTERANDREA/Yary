@@ -11,7 +11,7 @@ module.exports = {
     "orio al serio",
   ],
   description: "Servizio Noleggio Con Conducente Milano Bergamo",
-  image: "https://www.ncctaximilano.com/images/head-6.jpg",
+  image: "https://www.ncctaximilano.com/images/snapshot-it.jpg",
   author: "NCC TAXI MILANO",
   trackingId: "UA-176822328-1",
   siteUrl: "https://www.ncctaximilano.com",
