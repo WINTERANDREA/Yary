@@ -26,10 +26,9 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
     `,
   );
 
-  const metaDescription = { description } || site.siteMetadata.description;
+  const metaDescription = description || site.siteMetadata.description;
 
-  const metaImage = site.siteMetadata.image;
-  const metaKeyword = { keywords } || site.siteMetadata.image;
+  const metaImage = image || site.siteMetadata.image;
 
   return (
     <Helmet
@@ -81,10 +80,10 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
         },
       ]
         .concat(
-          metaKeyword.length > 0
+          keywords.length > 0
             ? {
                 name: `keywords`,
-                content: metaKeyword.join(`, `),
+                content: keywords.join(`, `),
               }
             : [],
         )
@@ -105,7 +104,6 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
         }
       `}
       </script>
-      <meta name="google-site-verification" content="MqL6NY4tpQCl9qB9ognOtARm2QxUp1OTyfS53RdKmVE" />
     </Helmet>
   );
 };

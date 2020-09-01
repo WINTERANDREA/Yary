@@ -71,7 +71,7 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://www.ncctaximilano.com",
-        sitemap: "https://www.example.com/sitemap.xml",
+        sitemap: "https://www.ncctaximilano.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
