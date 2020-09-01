@@ -104,6 +104,7 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
         }
       `}
       </script>
+      <meta name="google-site-verification" content="MqL6NY4tpQCl9qB9ognOtARm2QxUp1OTyfS53RdKmVE" />
     </Helmet>
   );
 };
