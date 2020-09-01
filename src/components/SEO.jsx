@@ -105,6 +105,7 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
       `}
       </script>
       <meta name="google-site-verification" content="MqL6NY4tpQCl9qB9ognOtARm2QxUp1OTyfS53RdKmVE" />
+      <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
     </Helmet>
   );
 };
