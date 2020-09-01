@@ -97,7 +97,7 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
         )
         .concat(meta)}
     >
-      {/* <script type="application/ld+json">
+      <script type="application/ld+json">
         {`
         {
           "@context": "http://schema.org",
@@ -117,7 +117,7 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
         type="image/png"
         href="https://www.ncctaximilano.com/images/favicon.ico"
         sizes="16x16"
-      /> */}
+      />
     </Helmet>
   );
 };
