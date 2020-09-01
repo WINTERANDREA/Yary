@@ -26,9 +26,9 @@ const SEO = ({ lang, description, meta, keywords, title, image }) => {
     `,
   );
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = { description } || site.siteMetadata.description;
 
-  const metaImage = image || site.siteMetadata.image;
+  const metaImage = { image } || site.siteMetadata.image;
 
   return (
     <Helmet
