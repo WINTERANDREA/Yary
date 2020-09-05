@@ -112,6 +112,12 @@ export const query = graphql`
           termsHref
           termsText
           title
+          titoloeventi
+          titolodisco
+          titolomatri
+          testoeventi
+          testodisco
+          testomatri
           timeline {
             content
             header

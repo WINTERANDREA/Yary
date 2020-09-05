@@ -2,7 +2,6 @@
   overflow-y: hidden;
   position: relative;
   height: 500px;
-  border: 1px solid #212529;
   border-top: none;
   margin-bottom: 40px;
   &_img {
@@ -101,12 +100,12 @@
 }
 
 @media (min-width: 400px) and (max-width: 768px) {
- .margin-top-car {
-  margin-top: 50px;
-}
+  .margin-top-car {
+    margin-top: 50px;
+  }
 }
 @media (min-width: 769px) and (max-width: 991px) {
- .margin-top-car {
-  margin-top: 10px;
-}
+  .margin-top-car {
+    margin-top: 10px;
+  }
 }

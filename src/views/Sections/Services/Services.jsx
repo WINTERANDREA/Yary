@@ -12,20 +12,31 @@ const Services = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { anchor, header: rootHeader, subheader: rootSubHeader, services } = frontmatter;
+  const {
+    anchor,
+    header: rootHeader,
+    subheader: rootSubHeader,
+    titoloeventi,
+    titolodisco,
+    titolomatri,
+    testoeventi,
+    testodisco,
+    testomatri,
+  } = frontmatter;
 
   return (
     <PageSection className={className} id={anchor}>
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>
-      <Row className="text-center">
-        {services.map((service) => (
-          <Col md={4} key={service.header}>
-            <ServiceItem {...service} />
-          </Col>
-        ))}
-      </Row>
+      <ServiceItem
+        titoloeventi={titoloeventi}
+        titolodisco={titolodisco}
+        titolomatri={titolomatri}
+        testoeventi={testoeventi}
+        testodisco={testodisco}
+        testomatri={testomatri}
+      />
     </PageSection>
   );
 };

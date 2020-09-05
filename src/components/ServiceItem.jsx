@@ -1,43 +1,138 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Row, Col, Container } from "react-bootstrap";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image/withIEPolyfill";
 
-import CircleFAButton from "components/CircleFAButton";
-import Image from "components/Image";
 import "./ServiceItem.scss";
 
-const ServiceItem = ({ iconName, imageFileName, header, content }) => {
-  let iconPart;
-  if (iconName) {
-    iconPart = <CircleFAButton iconName={iconName} />;
-  }
-
-  let imagePart;
-  if (imageFileName) {
-    imagePart = <Image className="service-item-image" fileName={imageFileName} />;
-  }
-
+const ServiceItem = ({
+  header,
+  titoloeventi,
+  titolodisco,
+  titolomatri,
+  testoeventi,
+  testodisco,
+  testomatri,
+}) => {
+  const data = useStaticQuery(graphql`
+    {
+      matrimoni: file(relativePath: { eq: "assets/images/matrimoni.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      eventi: file(relativePath: { eq: "assets/images/eventi.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      discoteche: file(relativePath: { eq: "assets/images/discoteca.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+  `);
   return (
-    <>
-      {iconPart}
-      {imagePart}
-      <h4 className="service-item-heading">{header}</h4>
-      <p className="text-muted">{content}</p>
-    </>
+    <Container>
+      <Row className="mt-5">
+        <Col
+          data-sal="slide-right"
+          data-sal-delay="200"
+          data-sal-easing="ease"
+          data-sal-duration="1000"
+          xs={12}
+          md={6}
+        >
+          <Img alt="alt" fluid={data.eventi.childImageSharp.fluid} />
+        </Col>
+        <Col
+          data-sal="slide-left"
+          data-sal-delay="200"
+          data-sal-easing="ease"
+          data-sal-duration="1000"
+          xs={12}
+          md={6}
+        >
+          <h4 className="titolo-img">{titoloeventi}</h4>
+          <p>{testoeventi}</p>
+        </Col>
+      </Row>
+      <Row className="mt-5">
+        <Col
+          data-sal="slide-left"
+          data-sal-delay="400"
+          data-sal-easing="ease"
+          data-sal-duration="1000"
+          xs={12}
+          md={(6, { order: "last" })}
+        >
+          <Img alt="alt" fluid={data.matrimoni.childImageSharp.fluid} />
+        </Col>
+        <Col
+          data-sal="slide-right"
+          data-sal-delay="400"
+          data-sal-easing="ease"
+          data-sal-duration="1000"
+          xs={12}
+          md={6}
+        >
+          <h4 className="titolo-img">{titolomatri}</h4>
+          <p>{testomatri}</p>
+        </Col>
+      </Row>
+      <Row className="mt-5">
+        <Col
+          data-sal="slide-right"
+          data-sal-delay="600"
+          data-sal-easing="ease"
+          data-sal-duration="1000"
+          xs={12}
+          md={6}
+        >
+          <Img alt="alt" fluid={data.discoteche.childImageSharp.fluid} />
+        </Col>
+        <Col
+          data-sal="slide-left"
+          data-sal-delay="600"
+          data-sal-easing="ease"
+          data-sal-duration="1000"
+          xs={12}
+          md={6}
+        >
+          <h4 className="titolo-img">{titolodisco}</h4>
+          <p>{testodisco}</p>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
 ServiceItem.propTypes = {
-  iconName: PropTypes.string,
-  imageFileName: PropTypes.string,
   header: PropTypes.string,
-  content: PropTypes.string,
+  titolodisco: PropTypes.string,
+  titoloeventi: PropTypes.string,
+  titolomatri: PropTypes.string,
+  testodisco: PropTypes.string,
+  testoeventi: PropTypes.string,
+  testomatri: PropTypes.string,
 };
 
 ServiceItem.defaultProps = {
-  iconName: null,
-  imageFileName: null,
   header: "",
-  content: "",
+  titolodisco: "",
+  titoloeventi: "",
+  titolomatri: "",
+  testodisco: PropTypes.string,
+  testoeventi: PropTypes.string,
+  testomatri: PropTypes.string,
 };
 
 export default ServiceItem;
