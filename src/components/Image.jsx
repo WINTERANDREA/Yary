@@ -14,8 +14,8 @@ const Image = ({ fileName, alt, objectPosition, objectFit, ...restProps }) => (
               relativePath
               name
               childImageSharp {
-                sizes(maxWidth: 1920) {
-                  ...GatsbyImageSharpSizes
+                fluid(maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -30,14 +30,14 @@ const Image = ({ fileName, alt, objectPosition, objectFit, ...restProps }) => (
         return null;
       }
 
-      const imageSizes = image.node.childImageSharp.sizes;
+      const imageSizes = image.node.childImageSharp.fluid;
       return (
         <Img
           objectPosition={objectPosition}
           objectFit={objectFit}
           style={{ objectPosition: "left" }}
           alt={alt}
-          sizes={imageSizes}
+          fluid={imageSizes}
           {...restProps}
         />
       );

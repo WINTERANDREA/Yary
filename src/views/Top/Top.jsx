@@ -1,13 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql, useStaticQuery } from "gatsby";
-import { Button, Container } from "react-bootstrap";
-import useSmoothScrollTo from "hooks/useSmoothScrollTo";
-import ImageCard from "components/ImageCard";
+import { Container } from "react-bootstrap";
+
 import IconCallSet from "components/IconCallSet";
 import BackgroundImg from "components/BackgroundImg";
 import "./Top.scss";
-
 
 const Top = ({ frontmatter }) => {
   const data = useStaticQuery(graphql`
@@ -25,37 +23,32 @@ const Top = ({ frontmatter }) => {
     return null;
   }
 
-  const {
-    header,
-    subheader,
-    jumpToAnchor,
-    jumpToAnchorText,
-    telefono,
-    whatsapp,
-    telegram,
-  } = frontmatter;
+  const { header, subheader, telefono, whatsapp, telegram } = frontmatter;
   // eslint-disable-next-line react-hooks/rules-of-hooks
 
   /* const icon = <IconCallSet telefono={telefono} whatsapp={whatsapp} telegram={telegram} />; */
   return (
     <>
-      <BackgroundImg className='padding-bg-top' bgLayer='rgba(0,0,0,.2)' bgImage={data.file.childImageSharp.fluid}>
-       <Container
+      <BackgroundImg
+        className="padding-bg-top"
+        bgLayer="rgba(0,0,0,.2)"
+        bgImage={data.file.childImageSharp.fluid}
+      >
+        <Container
           style={{
             height: "100%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-evenly",
-            textAlign: 'center',
-            color: 'white'
+            textAlign: "center",
+            color: "white",
           }}
         >
           <h1 className="intro-heading text-uppercase">{header}</h1>
           <h3 className="my-0 py-3">{subheader}</h3>
-         <IconCallSet telefono={telefono} whatsapp={whatsapp} telegram={telegram} />
+          <IconCallSet telefono={telefono} whatsapp={whatsapp} telegram={telegram} />
         </Container>
       </BackgroundImg>
-   
     </>
   );
 };

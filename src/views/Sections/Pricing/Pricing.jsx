@@ -2,13 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
-import { Row, Card, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import SectionHeader from "components/SectionHeader";
-import PageSection from "components/PageSection";
+
 import { graphql, useStaticQuery } from "gatsby";
 import "./Pricing.scss";
-import Img from "gatsby-image/withIEPolyfill";
-import { none } from "ramda";
 import TableRoutes from "components/TableRoutes";
 import BackgroundImg from "components/BackgroundImg";
 
@@ -47,34 +45,38 @@ const Pricing = ({ className, frontmatter }) => {
       style={{ background: "#212529" }}
       id={anchor}
     >
-      <BackgroundImg containerStyle={{padding: '80px 0'}} bgLayer='rgba(0,0,0,.2)' bgImage={data.file.childImageSharp.fluid} >
-       <Container
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%",
-              color: 'white'
-            }}
-          >
-            <div className="pricing-text">
-              <SectionHeader
-                className="header-pricing"
-                header={rootHeader}
-                subheader={rootSubHeader}
+      <BackgroundImg
+        containerStyle={{ padding: "80px 0" }}
+        bgLayer="rgba(0,0,0,.2)"
+        bgImage={data.file.childImageSharp.fluid}
+      >
+        <Container
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100%",
+            color: "white",
+          }}
+        >
+          <div className="pricing-text">
+            <SectionHeader
+              className="header-pricing"
+              header={rootHeader}
+              subheader={rootSubHeader}
+            />
+            <div style={{ marginTop: 50 }}>
+              <TableRoutes
+                Route={Route}
+                Duration={Duration}
+                Price={Price}
+                Disclaimer={Disclaimer}
               />
-              <div style={{ marginTop: 50 }}>
-                <TableRoutes
-                  Route={Route}
-                  Duration={Duration}
-                  Price={Price}
-                  Disclaimer={Disclaimer}
-                />
-                <h4 style={{ marginTop: 60 }}>{HeadText}</h4>
-                <p>{HeadDescription}</p>
-              </div>
+              <h4 style={{ marginTop: 60 }}>{HeadText}</h4>
+              <p>{HeadDescription}</p>
             </div>
-          </Container>
+          </div>
+        </Container>
       </BackgroundImg>
     </section>
   );
