@@ -7,7 +7,6 @@ import Img from "gatsby-image/withIEPolyfill";
 import "./ServiceItem.scss";
 
 const ServiceItem = ({
-  header,
   titoloeventi,
   titolodisco,
   titolomatri,
@@ -44,20 +43,20 @@ const ServiceItem = ({
     <Container>
       <Row className="mt-5">
         <Col
-          data-sal="slide-right"
+          data-sal="zoom-in"
           data-sal-delay="200"
           data-sal-easing="ease"
-          data-sal-duration="1000"
+          data-sal-duration="1500"
           xs={12}
           md={6}
         >
           <Img alt="alt" fluid={data.eventi.childImageSharp.fluid} />
         </Col>
         <Col
-          data-sal="slide-left"
+          data-sal="zoom-in"
           data-sal-delay="200"
           data-sal-easing="ease"
-          data-sal-duration="1000"
+          data-sal-duration="1500"
           xs={12}
           md={6}
         >
@@ -67,20 +66,20 @@ const ServiceItem = ({
       </Row>
       <Row className="mt-5">
         <Col
-          data-sal="slide-left"
-          data-sal-delay="400"
+          data-sal="zoom-in"
+          data-sal-delay="200"
           data-sal-easing="ease"
-          data-sal-duration="1000"
+          data-sal-duration="1500"
           xs={12}
           md={(6, { order: "last" })}
         >
           <Img alt="alt" fluid={data.matrimoni.childImageSharp.fluid} />
         </Col>
         <Col
-          data-sal="slide-right"
-          data-sal-delay="400"
+          data-sal="zoom-in"
+          data-sal-delay="200"
           data-sal-easing="ease"
-          data-sal-duration="1000"
+          data-sal-duration="1500"
           xs={12}
           md={6}
         >
@@ -90,20 +89,20 @@ const ServiceItem = ({
       </Row>
       <Row className="mt-5">
         <Col
-          data-sal="slide-right"
-          data-sal-delay="600"
+          data-sal="zoom-in"
+          data-sal-delay="200"
           data-sal-easing="ease"
-          data-sal-duration="1000"
+          data-sal-duration="1500"
           xs={12}
           md={6}
         >
           <Img alt="alt" fluid={data.discoteche.childImageSharp.fluid} />
         </Col>
         <Col
-          data-sal="slide-left"
-          data-sal-delay="600"
+          data-sal="zoom-in"
+          data-sal-delay="200"
           data-sal-easing="ease"
-          data-sal-duration="1000"
+          data-sal-duration="1500"
           xs={12}
           md={6}
         >
@@ -116,7 +115,6 @@ const ServiceItem = ({
 };
 
 ServiceItem.propTypes = {
-  header: PropTypes.string,
   titolodisco: PropTypes.string,
   titoloeventi: PropTypes.string,
   titolomatri: PropTypes.string,
@@ -126,7 +124,6 @@ ServiceItem.propTypes = {
 };
 
 ServiceItem.defaultProps = {
-  header: "",
   titolodisco: "",
   titoloeventi: "",
   titolomatri: "",

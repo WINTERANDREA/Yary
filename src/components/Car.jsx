@@ -27,7 +27,7 @@ const Car = ({
         <div className="car-container_banner">
           <h2 className="car-name">{carName}</h2>
         </div>
-        <Image className='margin-top-car' fileName={fluid} alt={imageAlt} />
+        <Image className="margin-top-car" fileName={fluid} alt={imageAlt} />
       </div>
       <div>
         <div className="car-container_banner">
