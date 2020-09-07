@@ -22,7 +22,7 @@ cars2: [
     seats: "N° Persone",
     numberOfSeats: "7",
     price: "Prezzo €/km",
-    amount: "2",
+    amount: "2.5",
     luggage: "N° Bagagli",
     numberOfLuggage: "9",
     detailButton: "Dettagli", 
